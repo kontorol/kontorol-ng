@@ -1,9 +1,9 @@
 import { Injectable, SkipSelf, Optional, Self, Inject, Provider, OnDestroy } from '@angular/core';
 import { JL } from 'jsnlog';
 import { InjectionToken } from '@angular/core';
-import { KalturaLoggerRecordService } from './kaltura-logger-record.service';
+import { KontorolLoggerRecordService } from './kontorol-logger-record.service';
 
-export const KalturaLoggerName = new InjectionToken<string>('kaltura-logger-name');
+export const KontorolLoggerName = new InjectionToken<string>('kontorol-logger-name');
 
 export type Context = { [key: string]: any };
 export type DefferedContext = () => Context;
@@ -12,12 +12,12 @@ export type LogLevels = 'All' | 'Trace' | 'Debug' | 'Info' | 'Warn' | 'Error' | 
 let randomLoggerNameNumber = 1;
 
 @Injectable()
-export class KalturaLogger implements OnDestroy {
+export class KontorolLogger implements OnDestroy {
   static resetDefaultExecuted = false;
 
   static resetDefaultJSNLog() {
-    if (!KalturaLogger.resetDefaultExecuted) {
-      KalturaLogger.resetDefaultExecuted = true;
+    if (!KontorolLogger.resetDefaultExecuted) {
+      KontorolLogger.resetDefaultExecuted = true;
       const consoleAppender = JL.createConsoleAppender('consoleAppender');
 
       JL().setOptions({
@@ -29,9 +29,9 @@ export class KalturaLogger implements OnDestroy {
 
   static createLogger(loggerName: string): Provider[] {
     return [
-      KalturaLogger,
+      KontorolLogger,
       {
-        provide: KalturaLoggerName, useValue: loggerName
+        provide: KontorolLoggerName, useValue: loggerName
       }
     ];
   }
@@ -45,11 +45,11 @@ export class KalturaLogger implements OnDestroy {
   }
 
 
-  constructor(@Inject(KalturaLoggerName) @Optional() @Self() name: string,
-              @SkipSelf() @Optional() parentLogger: KalturaLogger,
-              @Optional() private _loggerRecordInterceptor: KalturaLoggerRecordService) {
+  constructor(@Inject(KontorolLoggerName) @Optional() @Self() name: string,
+              @SkipSelf() @Optional() parentLogger: KontorolLogger,
+              @Optional() private _loggerRecordInterceptor: KontorolLoggerRecordService) {
 
-    KalturaLogger.resetDefaultJSNLog();
+    KontorolLogger.resetDefaultJSNLog();
 
     if (!name) {
       name = 'logger' + randomLoggerNameNumber;
@@ -96,8 +96,8 @@ export class KalturaLogger implements OnDestroy {
     JL().setOptions({level: level});
   }
 
-  public subLogger(name: string): KalturaLogger {
-    return new KalturaLogger(name, this, this._loggerRecordInterceptor);
+  public subLogger(name: string): KontorolLogger {
+    return new KontorolLogger(name, this, this._loggerRecordInterceptor);
   }
 
   ngOnDestroy() {

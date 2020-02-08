@@ -18,35 +18,35 @@
       "dom"
     ],
     "paths": {
-      "@kaltura-ng/kaltura-common": [
-        "dist/kaltura-ng/kaltura-common"
+      "@kontorol-ng/kontorol-common": [
+        "dist/kontorol-ng/kontorol-common"
       ],
-      "@kaltura-ng/kaltura-common/*": [
-        "dist/kaltura-ng/kaltura-common/*"
+      "@kontorol-ng/kontorol-common/*": [
+        "dist/kontorol-ng/kontorol-common/*"
       ],
-      "@kaltura-ng/kaltura-ui": [
-        "dist/kaltura-ng/kaltura-ui"
+      "@kontorol-ng/kontorol-ui": [
+        "dist/kontorol-ng/kontorol-ui"
       ],
-      "@kaltura-ng/kaltura-ui/*": [
-        "dist/kaltura-ng/kaltura-ui/*"
+      "@kontorol-ng/kontorol-ui/*": [
+        "dist/kontorol-ng/kontorol-ui/*"
       ],
-      "@kaltura-ng/kaltura-logger": [
-        "dist/kaltura-ng/kaltura-logger"
+      "@kontorol-ng/kontorol-logger": [
+        "dist/kontorol-ng/kontorol-logger"
       ],
-      "@kaltura-ng/kaltura-logger/*": [
-        "dist/kaltura-ng/kaltura-logger/*"
+      "@kontorol-ng/kontorol-logger/*": [
+        "dist/kontorol-ng/kontorol-logger/*"
       ],
-      "@kaltura-ng/kaltura-primeng-ui": [
-        "dist/kaltura-ng/kaltura-primeng-ui"
+      "@kontorol-ng/kontorol-primeng-ui": [
+        "dist/kontorol-ng/kontorol-primeng-ui"
       ],
-      "@kaltura-ng/kaltura-primeng-ui/*": [
-        "dist/kaltura-ng/kaltura-primeng-ui/*"
+      "@kontorol-ng/kontorol-primeng-ui/*": [
+        "dist/kontorol-ng/kontorol-primeng-ui/*"
       ],
-      "@kaltura-ng/mc-shared": [
-        "dist/kaltura-ng/mc-shared"
+      "@kontorol-ng/mc-shared": [
+        "dist/kontorol-ng/mc-shared"
       ],
-      "@kaltura-ng/mc-shared/*": [
-        "dist/kaltura-ng/mc-shared/*"
+      "@kontorol-ng/mc-shared/*": [
+        "dist/kontorol-ng/mc-shared/*"
       ]
     }
   }

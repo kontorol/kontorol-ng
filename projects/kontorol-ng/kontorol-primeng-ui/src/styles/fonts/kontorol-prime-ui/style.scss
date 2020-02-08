@@ -1,18 +1,18 @@
 @import "variables";
 
 @font-face {
-  font-family: 'kaltura-prime-ui';
+  font-family: 'kontorol-prime-ui';
   src:
-    url('#{$icomoon-font-path}/kaltura-prime-ui.ttf?d1js1p') format('truetype'),
-    url('#{$icomoon-font-path}/kaltura-prime-ui.woff?d1js1p') format('woff'),
-    url('#{$icomoon-font-path}/kaltura-prime-ui.svg?d1js1p#kaltura-prime-ui') format('svg');
+    url('#{$icomoon-font-path}/kontorol-prime-ui.ttf?d1js1p') format('truetype'),
+    url('#{$icomoon-font-path}/kontorol-prime-ui.woff?d1js1p') format('woff'),
+    url('#{$icomoon-font-path}/kontorol-prime-ui.svg?d1js1p#kontorol-prime-ui') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="k-icon-"], [class*=" k-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'kaltura-prime-ui' !important;
+  font-family: 'kontorol-prime-ui' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

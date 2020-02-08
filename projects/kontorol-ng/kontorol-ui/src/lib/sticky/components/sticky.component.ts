@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, AfterViewInit, OnDestroy, ViewChild, Renderer2 } from '@angular/core';
 import { StickyScrollService } from '../services/sticky-scroll.service';
 import { StickyDirective } from '../directives/sticky.directive';
-import { cancelOnDestroy, tag } from '@kaltura-ng/kaltura-common';
+import { cancelOnDestroy, tag } from '@kontorol-ng/kontorol-common';
 
 @Component({
 	selector: 'kSticky',

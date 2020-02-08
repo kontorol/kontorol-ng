@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class KalturaLoggerRecordService {
+export class KontorolLoggerRecordService {
   private _recordLogs = false;
   private _logsBuffer: any[] = [];
   
