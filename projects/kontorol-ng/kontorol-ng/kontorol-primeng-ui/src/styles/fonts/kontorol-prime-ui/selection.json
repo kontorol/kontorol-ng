@@ -33,7 +33,7 @@
   ],
   "height": 1024,
   "metadata": {
-    "name": "kaltura-prime-ui"
+    "name": "kontorol-prime-ui"
   },
   "preferences": {
     "showGlyphs": true,
@@ -44,7 +44,7 @@
     "fontPref": {
       "prefix": "k-icon-",
       "metadata": {
-        "fontFamily": "kaltura-prime-ui",
+        "fontFamily": "kontorol-prime-ui",
         "majorVersion": 1,
         "minorVersion": 0
       },

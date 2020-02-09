@@ -8,7 +8,7 @@ import 'rxjs/add/operator/do';
 import { WidgetsManagerBase } from './widgets-manager-base';
 import { ISubscription } from 'rxjs/Subscription';
 import { WidgetState, WidgetStateData } from './widget-state';
-import { KalturaLogger, EmptyLogger } from '@kaltura-ng/kaltura-common';
+import { kontorolLogger, EmptyLogger } from '@kontorol-ng/kontorol-common';
 
 // DEVELOPER NOTE: Don't implement ngOnDestroy - the inheritor will probably override this without calling super()
 export abstract class WidgetBase<TForm extends WidgetsManagerBase<TData,TRequest>, TData, TRequest>
@@ -24,9 +24,9 @@ export abstract class WidgetBase<TForm extends WidgetsManagerBase<TData,TRequest
     private _data: TData;
     private _dataSource: ReplaySubject<TData> = new ReplaySubject<TData>(1);
     public data$ = this._dataSource.asObservable();
-    protected _logger: KalturaLogger;
+    protected _logger: kontorolLogger;
 
-    constructor(private _key : string, logger?: KalturaLogger)
+    constructor(private _key : string, logger?: kontorolLogger)
     {
         if (!_key)
         {

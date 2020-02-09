@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Inject, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { KalturaLogger, LogLevels } from '@kaltura-ng/kaltura-logger';
-import { APP_STORAGE_TOKEN, IAppStorage } from '@kaltura-ng/kaltura-common';
+import { kontorolLogger, LogLevels } from '@kontorol-ng/kontorol-logger';
+import { APP_STORAGE_TOKEN, IAppStorage } from '@kontorol-ng/kontorol-common';
 
 const logLevelCacheToken = 'power-user.log-level';
 
@@ -28,7 +28,7 @@ export class PowerUserConsoleComponent implements OnInit, OnChanges {
   public _selectedLogLevel: LogLevels;
   public _ready = false;
 
-  constructor(private _logger: KalturaLogger, @Inject(APP_STORAGE_TOKEN) private _storage: IAppStorage) {
+  constructor(private _logger: kontorolLogger, @Inject(APP_STORAGE_TOKEN) private _storage: IAppStorage) {
     this._logger = _logger.subLogger('PowerUserConsoleComponent');
   }
   

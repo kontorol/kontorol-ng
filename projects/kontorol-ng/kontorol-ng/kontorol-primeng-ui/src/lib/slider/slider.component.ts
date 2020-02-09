@@ -4,7 +4,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Slider } from 'primeng/slider';
 
 /* tslint:disable */
-export const KALTURA_SLIDER_VALUE_ACCESSOR: any = {
+export const KONTOROL_SLIDER_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => SliderComponent),
   multi: true
@@ -16,7 +16,7 @@ export const KALTURA_SLIDER_VALUE_ACCESSOR: any = {
   selector: 'kSlider',
   styleUrls: ['./slider.component.scss'],
   templateUrl: './slider.component.html',
-  providers: [DomHandler, KALTURA_SLIDER_VALUE_ACCESSOR]
+  providers: [DomHandler, KONTOROL_SLIDER_VALUE_ACCESSOR]
   /* tslint:enable */
 })
 // [kmcng] upon upgrade: compare implemented interfaces in the original component (no need to include ControlValueAccessor)

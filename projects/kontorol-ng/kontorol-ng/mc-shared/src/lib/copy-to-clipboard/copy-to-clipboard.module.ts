@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {TooltipModule} from "@kaltura-ng/kaltura-ui";
+import {TooltipModule} from "@kontorol-ng/kontorol-ui";
 import {CopyToClipboardComponent} from "./copy-to-clipboard.component";
 import {CommonModule} from "@angular/common";
 

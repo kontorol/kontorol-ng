@@ -1,20 +1,20 @@
 {
-  "name": "@kaltura-ng/kaltura-common",
+  "name": "@kontorol-ng/kontorol-common",
   "version": "7.1.0",
   "private": false,
-  "description": "Angular - commonly needed services within Kaltura projects",
+  "description": "Angular - commonly needed services within kontorol projects",
   "scripts": {
-    "build": "node ../../../scripts/build.js --library=@kaltura-ng/kaltura-common"
+    "build": "node ../../../scripts/build.js --library=@kontorol-ng/kontorol-common"
   },
   "keywords": [
-    "kaltura",
-    "kaltura-ng"
+    "kontorol",
+    "kontorol-ng"
   ],
   "license": "AGPL-3.0",
-  "homepage": "https://github.com/kaltura/kaltura-ng#readme",
+  "homepage": "https://github.com/kontorol/kontorol-ng#readme",
   "author": {
-    "name": "Kaltura Community",
-    "email": "community@kaltura.com"
+    "name": "kontorol Community",
+    "email": "community@kontorol.com"
   },
   "contributors": [
     {
@@ -28,10 +28,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaltura/kaltura-ng.git"
+    "url": "https://github.com/kontorol/kontorol-ng.git"
   },
   "bugs": {
-    "url": "https://github.com/kaltura/kaltura-ng/issues"
+    "url": "https://github.com/kontorol/kontorol-ng/issues"
   },
   "engines": {
     "node": ">=8.9.1 <9.0.0",

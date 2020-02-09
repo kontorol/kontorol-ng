@@ -18,7 +18,7 @@ import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/an
 import { Observable } from 'rxjs/Observable';
 import { ISubscription } from 'rxjs/Subscription';
 import { AutoComplete as PrimeAutoComplete, AUTOCOMPLETE_VALUE_ACCESSOR } from "primeng/components/autocomplete/autocomplete";
-import { KalturaBrowserUtils, BrowserNames } from '@kaltura-ng/kaltura-ui';
+import { kontorolBrowserUtils, BrowserNames } from '@kontorol-ng/kontorol-ui';
 import { DomHandler } from "primeng/components/dom/domhandler";
 import { ObjectUtils } from 'primeng/components/utils/objectutils';
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
@@ -32,7 +32,7 @@ export interface SuggestionsProviderData{
 }
 
 /* tslint:disable */
-export const KALTURA_AUTOCOMPLETE_VALUE_ACCESSOR: any = {
+export const KONTOROL_AUTOCOMPLETE_VALUE_ACCESSOR: any = {
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => AutoComplete),
     multi: true
@@ -47,7 +47,7 @@ export const KALTURA_AUTOCOMPLETE_VALUE_ACCESSOR: any = {
     // [kmcng] upon upgrade: sync with original component
     styleUrls: [ './auto-complete.component.scss' ],
     templateUrl: './auto-complete.component.html',
-    providers: [KALTURA_AUTOCOMPLETE_VALUE_ACCESSOR],
+    providers: [KONTOROL_AUTOCOMPLETE_VALUE_ACCESSOR],
     animations: [
       trigger('overlayAnimation', [
         state('void', style({
@@ -164,7 +164,7 @@ export class AutoComplete extends PrimeAutoComplete implements OnDestroy, AfterV
     {
         // IE11 bug causing output event to fire upon input field blur event when there is a placeholder. Thus, we remove the placeholder attribute for IE11, single selection mode.
         // Additional details: https://connect.microsoft.com/IE/feedback/details/810538/ie-11-fires-input-event-on-focus
-        const isIE11 = KalturaBrowserUtils.detectBrowser() === BrowserNames.IE11;
+        const isIE11 = kontorolBrowserUtils.detectBrowser() === BrowserNames.IE11;
         this._placeholder = isIE11 && !this._allowMultiple ? '' : value;
     }
     get placeholder(): string{
@@ -523,7 +523,7 @@ export class AutoComplete extends PrimeAutoComplete implements OnDestroy, AfterV
             }
 
             if (selectedItemValue === null || typeof selectedItemValue === 'undefined') {
-                console.warn("[kaltura] -> trying to select a value that is either null or undefined. action ignored"); // keep warning
+                console.warn("[kontorol] -> trying to select a value that is either null or undefined. action ignored"); // keep warning
             }else {
                 super.selectItem(selectedItemValue);
             }

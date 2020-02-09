@@ -1,8 +1,8 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { KalturaLogger, KalturaLoggerName } from './kaltura-logger.service';
+import { kontorolLogger, kontorolLoggerName } from './kontorol-logger.service';
 import { JL } from 'jsnlog';
-import { KalturaLoggerRecordService } from './kaltura-logger-record.service';
+import { kontorolLoggerRecordService } from './kontorol-logger-record.service';
 
 if (window && window.onerror) {
     window.onerror = null;
@@ -20,18 +20,18 @@ if (window && window.onerror) {
     providers: <any[]>[
     ]
 })
-export class KalturaLoggerModule {
+export class kontorolLoggerModule {
 
 
     static forRoot(name: string): ModuleWithProviders {
         return {
-          ngModule: KalturaLoggerModule,
+          ngModule: kontorolLoggerModule,
           providers: [
-	          KalturaLogger,
+	          kontorolLogger,
 	          {
-		          provide: KalturaLoggerName, useValue: name
+		          provide: kontorolLoggerName, useValue: name
 	          },
-            KalturaLoggerRecordService
+            kontorolLoggerRecordService
           ]
         }
     }
