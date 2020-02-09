@@ -1,4 +1,10 @@
 # Change Log
+<a name="3.2.1"></a>
+## 3.2.1 (2020-02-09)
+
+* update dependent libraries versions
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/kontorol/kontorol-ng/compare/@kontorol-ng/kontorol-primeng-ui@3.1.2...3.2.0) (2019-07-11)
 
