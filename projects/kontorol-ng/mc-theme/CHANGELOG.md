@@ -1,4 +1,10 @@
 # Change Log
+<a name="3.1.4"></a>
+## 3.1.4 (2020-02-09)
+
+* update dependent libraries versions
+
+
 <a name="3.0.13"></a>
 ## [3.0.13](https://github.com/kontorol/kontorol-ng/compare/@kontorol-ng/mc-theme@3.0.12...3.0.13) (2019-09-08)
 

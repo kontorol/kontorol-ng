@@ -1,4 +1,10 @@
 # Change Log
+<a name="7.1.1"></a>
+## 7.1.1 (2020-02-09)
+
+* update dependent libraries versions
+
+
 <a name="7.0.3"></a>
 ## [7.0.3](https://github.com/kontorol/kontorol-ng/compare/@kontorol-ng/kontorol-common@7.0.2...7.0.3) (2019-02-07)
 

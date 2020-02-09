@@ -1,6 +1,6 @@
 {
   "name": "@kontorol-ng/kontorol-common",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "private": false,
   "description": "Angular - commonly needed services within Kontorol projects",
   "scripts": {

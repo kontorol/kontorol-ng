@@ -1,4 +1,10 @@
 # Change Log
+<a name="7.3.2"></a>
+## 7.3.2 (2020-02-09)
+
+* update dependent libraries versions
+
+
 <a name="7.2.0"></a>
 # [7.2.0](https://github.com/kontorol/kontorol-ng/compare/@kontorol-ng/kontorol-ui@7.1.0...7.2.0) (2019-07-11)
 
