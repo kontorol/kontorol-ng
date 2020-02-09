@@ -1,5 +1,5 @@
 {
-  "name": "@kaltura-ng/kaltura-ui",
+  "name": "@kontorol-ng/kontorol-ui",
   "version": "7.3.1",
   "private": false,
   "description": "Angular - Kontorol UI directives, pipes and services",
@@ -43,7 +43,7 @@
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "@angular/forms": "^8.2.6",
-    "@kaltura-ng/kaltura-common": "7.1.0",
+    "@kontorol-ng/kontorol-common": "7.1.0",
     "jquery": "^3.3.1",
     "moment": "^2.24.0"
   }
