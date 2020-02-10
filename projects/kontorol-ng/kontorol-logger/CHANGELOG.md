@@ -1,4 +1,10 @@
 # Change Log
+<a name="3.1.1"></a>
+## 3.1.1 (2020-02-10)
+
+* update dependent libraries versions
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/kontorol/kontorol-ng/compare/@kontorol-ng/kontorol-logger@3.0.2...3.1.0) (2019-10-07)
 

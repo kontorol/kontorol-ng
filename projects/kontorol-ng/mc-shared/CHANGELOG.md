@@ -1,4 +1,10 @@
 # Change Log
+<a name="5.2.1"></a>
+## 5.2.1 (2020-02-10)
+
+* update dependent libraries versions
+
+
 <a name="5.2.0"></a>
 # [5.2.0](https://github.com/kontorol/kontorol-ng/compare/@kontorol-ng/mc-shared@5.1.7...5.2.0) (2019-10-07)
 
