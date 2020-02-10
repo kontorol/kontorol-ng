@@ -47,31 +47,31 @@ async function buildLibrary(library) {
   const libraryName = library? library.name : null;
   log.info(`build library`, libraryName);
   switch (libraryName) {
-    case "@kaltura-ng/kaltura-logger":
-      await executeNGBuild('@kaltura-ng/kaltura-logger');
+    case "@kontorol-ng/kontorol-logger":
+      await executeNGBuild('@kontorol-ng/kontorol-logger');
       break;
-    case "@kaltura-ng/kaltura-common":
-      await executeNGBuild('@kaltura-ng/kaltura-common');
+    case "@kontorol-ng/kontorol-common":
+      await executeNGBuild('@kontorol-ng/kontorol-common');
       break;
-    case "@kaltura-ng/kaltura-ui": {
-      await executeNGBuild('@kaltura-ng/kaltura-ui');
-      const source = path.resolve(rootPath, 'projects/kaltura-ng/kaltura-ui/src/styles');
-      const target = path.resolve(distPath, 'kaltura-ng/kaltura-ui/styles');
+    case "@kontorol-ng/kontorol-ui": {
+      await executeNGBuild('@kontorol-ng/kontorol-ui');
+      const source = path.resolve(rootPath, 'projects/kontorol-ng/kontorol-ui/src/styles');
+      const target = path.resolve(distPath, 'kontorol-ng/kontorol-ui/styles');
       await copyFolders(source, target);
     }
       break;
-    case "@kaltura-ng/kaltura-primeng-ui": {
-      await executeNGBuild('@kaltura-ng/kaltura-primeng-ui');
-      const source = path.resolve(rootPath, 'projects/kaltura-ng/kaltura-primeng-ui/src/styles');
-      const target = path.resolve(distPath, 'kaltura-ng/kaltura-primeng-ui/styles');
+    case "@kontorol-ng/kontorol-primeng-ui": {
+      await executeNGBuild('@kontorol-ng/kontorol-primeng-ui');
+      const source = path.resolve(rootPath, 'projects/kontorol-ng/kontorol-primeng-ui/src/styles');
+      const target = path.resolve(distPath, 'kontorol-ng/kontorol-primeng-ui/styles');
       await copyFolders(source, target);
     }
       break;
-    case "@kaltura-ng/mc-shared":
-      await executeNGBuild('@kaltura-ng/mc-shared');
+    case "@kontorol-ng/mc-shared":
+      await executeNGBuild('@kontorol-ng/mc-shared');
       break;
-    case "@kaltura-ng/mc-theme":
-      const cwd = path.resolve(rootPath, 'projects/kaltura-ng/mc-theme');
+    case "@kontorol-ng/mc-theme":
+      const cwd = path.resolve(rootPath, 'projects/kontorol-ng/mc-theme');
       executeCommand('node', ['./scripts/build.js'], {cwd});
       break;
     default:
@@ -81,51 +81,51 @@ async function buildLibrary(library) {
 }
 
 
-const kalturaLogger = {
-  name: '@kaltura-ng/kaltura-logger',
-  sourcePath: path.resolve(rootPath, 'projects/kaltura-ng/kaltura-logger'),
-  distPath: path.resolve(distPath, 'kaltura-ng/kaltura-logger'),
+const kontorolLogger = {
+  name: '@kontorol-ng/kontorol-logger',
+  sourcePath: path.resolve(rootPath, 'projects/kontorol-ng/kontorol-logger'),
+  distPath: path.resolve(distPath, 'kontorol-ng/kontorol-logger'),
   dependencies: new Set(),
   dependents: new Set()
 };
 
-const kalturaCommon = {
-  name: '@kaltura-ng/kaltura-common',
-  sourcePath: path.resolve(rootPath, 'projects/kaltura-ng/kaltura-common'),
-  distPath: path.resolve(distPath, 'kaltura-ng/kaltura-common'),
+const kontorolCommon = {
+  name: '@kontorol-ng/kontorol-common',
+  sourcePath: path.resolve(rootPath, 'projects/kontorol-ng/kontorol-common'),
+  distPath: path.resolve(distPath, 'kontorol-ng/kontorol-common'),
   dependencies: new Set(),
   dependents: new Set()
 };
 
-const kalturaUI = {
-  name: '@kaltura-ng/kaltura-ui',
-  sourcePath: path.resolve(rootPath, 'projects/kaltura-ng/kaltura-ui'),
-  distPath: path.resolve(distPath, 'kaltura-ng/kaltura-ui'),
+const kontorolUI = {
+  name: '@kontorol-ng/kontorol-ui',
+  sourcePath: path.resolve(rootPath, 'projects/kontorol-ng/kontorol-ui'),
+  distPath: path.resolve(distPath, 'kontorol-ng/kontorol-ui'),
   dependencies: new Set(),
   dependents: new Set()
 
 };
 
-const kalturaPrimeUI = {
-  name: '@kaltura-ng/kaltura-primeng-ui',
-  sourcePath: path.resolve(rootPath, 'projects/kaltura-ng/kaltura-primeng-ui'),
-  distPath: path.resolve(distPath, 'kaltura-ng/kaltura-primeng-ui'),
+const kontorolPrimeUI = {
+  name: '@kontorol-ng/kontorol-primeng-ui',
+  sourcePath: path.resolve(rootPath, 'projects/kontorol-ng/kontorol-primeng-ui'),
+  distPath: path.resolve(distPath, 'kontorol-ng/kontorol-primeng-ui'),
   dependencies: new Set(),
   dependents: new Set()
 }
 
 const mcShared = {
-  name: '@kaltura-ng/mc-shared',
-  sourcePath: path.resolve(rootPath, 'projects/kaltura-ng/mc-shared'),
-  distPath: path.resolve(distPath, 'kaltura-ng/mc-shared'),
+  name: '@kontorol-ng/mc-shared',
+  sourcePath: path.resolve(rootPath, 'projects/kontorol-ng/mc-shared'),
+  distPath: path.resolve(distPath, 'kontorol-ng/mc-shared'),
   dependencies: new Set(),
   dependents: new Set()
 }
 
 const mcTheme = {
-  name: '@kaltura-ng/mc-theme',
-  sourcePath: path.resolve(rootPath, 'projects/kaltura-ng/mc-theme'),
-  distPath: path.resolve(distPath, 'kaltura-ng/mc-theme'),
+  name: '@kontorol-ng/mc-theme',
+  sourcePath: path.resolve(rootPath, 'projects/kontorol-ng/mc-theme'),
+  distPath: path.resolve(distPath, 'kontorol-ng/mc-theme'),
   dependencies: new Set(),
   dependents: new Set()
 }
@@ -139,11 +139,11 @@ function updateDependencies(library, dependencies) {
 }
 
 // TODO should extract peer depenedencies and build order automatically from package.json of libraries
-updateDependencies(kalturaUI, [kalturaCommon]);
-updateDependencies(kalturaPrimeUI, [kalturaCommon, kalturaUI]);
-updateDependencies(mcShared, [kalturaCommon, kalturaUI, kalturaLogger]);
+updateDependencies(kontorolUI, [kontorolCommon]);
+updateDependencies(kontorolPrimeUI, [kontorolCommon, kontorolUI]);
+updateDependencies(mcShared, [kontorolCommon, kontorolUI, kontorolLogger]);
 
-const repositoryLibraries = new Set([kalturaLogger, kalturaCommon, kalturaUI, kalturaPrimeUI, mcShared, mcTheme]);
+const repositoryLibraries = new Set([kontorolLogger, kontorolCommon, kontorolUI, kontorolPrimeUI, mcShared, mcTheme]);
 
 LoadPackageJsonFiles(repositoryLibraries);
 

@@ -3,9 +3,9 @@ import { InjectionToken } from '@angular/core';
 export type Context = { [key: string]: any };
 export type DefferedContext = () => Context;
 
-export const KalturaLoggerInjectionToken = new InjectionToken<KalturaLogger>('kaltura-logger');
+export const KontorolLoggerInjectionToken = new InjectionToken<KontorolLogger>('kontorol-logger');
 
-export interface KalturaLogger {
+export interface KontorolLogger {
 	trace(message: string, context?: Context): void;
 
 	trace(message: string, context?: DefferedContext): void;
@@ -42,10 +42,10 @@ export interface KalturaLogger {
 
 	fatal(message: string, context?: Error | Context): void;
 
-	subLogger(name: string): KalturaLogger;
+	subLogger(name: string): KontorolLogger;
 }
 
-export class EmptyLogger implements KalturaLogger {
+export class EmptyLogger implements KontorolLogger {
 	trace(message: string, context?: Context): void;
 	trace(message: string, context?: DefferedContext): void;
 	trace(message: string, context?: Context | DefferedContext): void;
@@ -82,7 +82,7 @@ export class EmptyLogger implements KalturaLogger {
 	fatal(message: string, context?): void {
 	}
 
-	subLogger(name: string): KalturaLogger {
+	subLogger(name: string): KontorolLogger {
 		return new EmptyLogger();
 	}
 }
