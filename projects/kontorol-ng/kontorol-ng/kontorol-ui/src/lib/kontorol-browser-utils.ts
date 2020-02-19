@@ -3,7 +3,7 @@ export enum BrowserNames
 	IE11,
 	other
 }
-export class KalturaBrowserUtils {
+export class KontorolBrowserUtils {
 	static detectBrowser(): BrowserNames
 		{
 			if (!!window['MSInputMethodContext'] && !!document['documentMode']){

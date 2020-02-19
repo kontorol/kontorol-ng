@@ -1,5 +1,5 @@
 /*
- * Public API Surface of kaltura-ui
+ * Public API Surface of kontorol-ui
  */
 
 export * from './index';

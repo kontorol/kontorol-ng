@@ -1,6 +1,6 @@
 /*
- * Public API Surface of kaltura-logger
+ * Public API Surface of kontorol-logger
  */
 
-export * from './lib/kaltura-logger.module';
-export * from './lib/kaltura-logger.service';
+export * from './lib/kontorol-logger.module';
+export * from './lib/kontorol-logger.service';

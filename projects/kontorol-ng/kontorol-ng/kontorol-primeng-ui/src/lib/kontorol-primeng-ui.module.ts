@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StickyDatatableHeaderDirective } from './directives/sticky-datatable-header.directive';
 import { DropdownCloseOnScroll } from './directives/dropdown-close-on-scroll';
 import { MenuCloseOnScroll } from './directives/menu-close-on-scroll';
-import { KalturaCommonModule } from '@kaltura-ng/kaltura-common';
+import { KontorolCommonModule } from '@kontorol-ng/kontorol-common';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule } from 'primeng/menu';
 
@@ -12,7 +12,7 @@ import { MenuModule } from 'primeng/menu';
  */
 @NgModule({
     imports: <any[]>[
-        CommonModule, InputTextModule, MenuModule, KalturaCommonModule
+        CommonModule, InputTextModule, MenuModule, KontorolCommonModule
     ],
     declarations: <any[]>[
 	    StickyDatatableHeaderDirective,
@@ -27,4 +27,4 @@ import { MenuModule } from 'primeng/menu';
     providers: <any[]>[
     ]
 })
-export class KalturaPrimeNgUIModule {}
+export class KontorolPrimeNgUIModule {}

@@ -1,5 +1,5 @@
 import { XmlToJSON } from './xml-to-json';
-import { KalturaUtils } from '../utils/kaltura-utils';
+import { KontorolUtils } from '../utils/kontorol-utils';
 
 
 
@@ -7,7 +7,7 @@ function convertAttributes(attributes: object): string {
   let parsedAttributes = '';
   if (attributes) {
     Object.keys(attributes).forEach(attributeName => {
-      const value = KalturaUtils.escapeXml(attributes[attributeName]);
+      const value = KontorolUtils.escapeXml(attributes[attributeName]);
       parsedAttributes += ` ${attributeName}="${value}"`;
     });
   }
@@ -35,7 +35,7 @@ function convertObjectToXml(prefix: string, propertyName: string, propertyValue:
         let parsedValue: any = '';
 
         if (propertyValue['text']) {
-            parsedValue = KalturaUtils.escapeXml(propertyValue['text']);
+            parsedValue = KontorolUtils.escapeXml(propertyValue['text']);
         } else {
             Object.keys(propertyValue).forEach(innerProperty => {
                 if (innerProperty !== 'attr') {
@@ -104,7 +104,7 @@ export class XmlParser
                 result = XmlParser.toSimpleXml(value, config);
             }
             else {
-                result = KalturaUtils.escapeXml(value);
+                result = KontorolUtils.escapeXml(value);
             }
 
             return result;
@@ -134,7 +134,7 @@ export class XmlParser
                         }
                     }
                     else {
-                        const value = KalturaUtils.escapeXml(propertyValue);
+                        const value = KontorolUtils.escapeXml(propertyValue);
                         result += `<${key}>${value}</${key}>`;
                     }
                 }

@@ -1,20 +1,20 @@
 {
-  "name": "@kaltura-ng/kaltura-primeng-ui",
+  "name": "@kontorol-ng/kontorol-primeng-ui",
   "version": "3.3.1",
   "private": false,
-  "description": "Angular - Kaltura UI directives, pipes and services that utilizes PrimeNG suite",
+  "description": "Angular - Kontorol UI directives, pipes and services that utilizes PrimeNG suite",
   "scripts": {
-    "build": "node ../../../scripts/build.js --library=@kaltura-ng/kaltura-primeng-ui"
+    "build": "node ../../../scripts/build.js --library=@kontorol-ng/kontorol-primeng-ui"
   },
   "keywords": [
-    "kaltura",
-    "kaltura-ng"
+    "kontorol",
+    "kontorol-ng"
   ],
   "license": "AGPL-3.0",
-  "homepage": "https://github.com/kaltura/kaltura-ng#readme",
+  "homepage": "https://github.com/kontorol/kontorol-ng#readme",
   "author": {
-    "name": "Kaltura Community",
-    "email": "community@kaltura.com"
+    "name": "Kontorol Community",
+    "email": "community@kontorol.com"
   },
   "contributors": [
     {
@@ -28,10 +28,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaltura/kaltura-ng.git"
+    "url": "https://github.com/kontorol/kontorol-ng.git"
   },
   "bugs": {
-    "url": "https://github.com/kaltura/kaltura-ng/issues"
+    "url": "https://github.com/kontorol/kontorol-ng/issues"
   },
   "engines": {
     "node": ">=8.9.1 <9.0.0",
@@ -44,8 +44,8 @@
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "@angular/forms": "^8.2.6",
-    "@kaltura-ng/kaltura-common": "7.1.0",
-    "@kaltura-ng/kaltura-ui": "7.3.1",
+    "@kontorol-ng/kontorol-common": "7.1.0",
+    "@kontorol-ng/kontorol-ui": "7.3.1",
     "primeng": "^8.0.3"
   }
 }
