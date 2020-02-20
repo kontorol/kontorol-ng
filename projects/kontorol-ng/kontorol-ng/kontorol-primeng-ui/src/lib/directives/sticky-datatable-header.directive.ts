@@ -1,6 +1,6 @@
 import { Directive, Renderer, ElementRef } from '@angular/core';
-import { StickyScrollService } from '@kaltura-ng/kaltura-ui';
-import { StickyDirective } from '@kaltura-ng/kaltura-ui';
+import { StickyScrollService } from '@kontorol-ng/kontorol-ui';
+import { StickyDirective } from '@kontorol-ng/kontorol-ui';
 
 @Directive({
     selector: '[kStickyHeader]'

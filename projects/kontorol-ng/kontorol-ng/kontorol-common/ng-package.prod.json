@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/kaltura-ng/kaltura-common",
+  "dest": "../../../dist/kontorol-ng/kontorol-common",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

@@ -7,7 +7,7 @@ import { SelectItem } from 'primeng/api';
 import { ObjectUtils } from 'primeng/components/utils/objectutils';
 
 /* tslint:disable */
-export const KALTURA_MULTISELECT_VALUE_ACCESSOR: any = {
+export const KONTOROL_MULTISELECT_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => MultiSelectComponent),
   multi: true
@@ -15,7 +15,7 @@ export const KALTURA_MULTISELECT_VALUE_ACCESSOR: any = {
 
 /* tslint:enable */
 
-export interface KalturaSelectItem extends SelectItem {
+export interface KontorolSelectItem extends SelectItem {
   disabled?: boolean;
 }
 
@@ -41,7 +41,7 @@ export interface KalturaSelectItem extends SelectItem {
     '[class.ui-inputwrapper-filled]': 'filled',
     '[class.ui-inputwrapper-focus]': 'focus'
   },
-  providers: [DomHandler, ObjectUtils, KALTURA_MULTISELECT_VALUE_ACCESSOR]
+  providers: [DomHandler, ObjectUtils, KONTOROL_MULTISELECT_VALUE_ACCESSOR]
   /* tslint:enable */
 })
 export class MultiSelectComponent extends MultiSelect {
@@ -104,11 +104,11 @@ export class MultiSelectComponent extends MultiSelect {
     this._cd.markForCheck();
   }
 
-  public isEnabled(option: KalturaSelectItem): boolean {
+  public isEnabled(option: KontorolSelectItem): boolean {
     return option && typeof option.disabled !== 'undefined' ? !option.disabled : true;
   }
 
-  public isSelected(option: KalturaSelectItem): boolean {
+  public isSelected(option: KontorolSelectItem): boolean {
     return this.findSelectionIndex(option.value) !== -1 && this.isEnabled(option);
   }
 

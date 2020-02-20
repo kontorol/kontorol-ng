@@ -17,7 +17,7 @@ import { Observable } from 'rxjs/Observable';
 import { ISubscription } from 'rxjs/Subscription';
 import { PopupWidgetLayout } from './popup-widget-layout';
 import 'rxjs/add/observable/fromEvent';
-import { cancelOnDestroy } from '@kaltura-ng/kaltura-common';
+import { cancelOnDestroy } from '@kontorol-ng/kontorol-common';
 
 export const PopupWidgetStates = {
     "Open": "open",
@@ -319,7 +319,7 @@ export class PopupWidgetComponent implements AfterViewInit, OnDestroy{
 	        }else {
 		        document.body.appendChild(this.popup.nativeElement);
 		        if (this.appendTo){
-		        	console.warn("[kaltura] -> Ignoring append to " + this.appendTo + " since popup is set to modal=true."); // keep warning
+		        	console.warn("[kontorol] -> Ignoring append to " + this.appendTo + " since popup is set to modal=true."); // keep warning
 		        }
 			}
 	        if (this.fullScreen){

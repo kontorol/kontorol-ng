@@ -13,7 +13,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "kaltura_logo"
+          "kontorol_logo"
         ]
       },
       "attrs": [
@@ -22,7 +22,7 @@
       "properties": {
         "order": 5,
         "id": 0,
-        "name": "kaltura_logo",
+        "name": "kontorol_logo",
         "prevSize": 32,
         "code": 59743
       },

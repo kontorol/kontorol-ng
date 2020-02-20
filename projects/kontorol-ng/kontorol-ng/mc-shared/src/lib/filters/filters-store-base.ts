@@ -1,7 +1,7 @@
 import { TypeAdapterBase } from './filter-types/type-adapter-base';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import { KalturaLogger } from '@kaltura-ng/kaltura-logger';
+import { KontorolLogger } from '@kontorol-ng/kontorol-logger';
 import { FiltersUtils } from './/filters-utils';
 import Immutable from 'seamless-immutable';
 
@@ -39,7 +39,7 @@ export abstract class FiltersStoreBase<T extends { [key: string]: any }> {
         (<any>this).__filters = value;
     }
 
-    constructor(protected _logger: KalturaLogger) {
+    constructor(protected _logger: KontorolLogger) {
         this._typeAdaptersMapping = this._getTypeAdaptersMapping();
 
     }
